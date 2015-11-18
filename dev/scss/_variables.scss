@@ -1,0 +1,53 @@
+// Colors
+
+$black:                       #000000;
+$gray-dark:                   #7f8c8d;
+$gray:                        #95a5a6;
+$gray-light:                  #bdc3c7;
+$gray-lighter:                #ecf0f1;
+$white:                       #ffffff;
+
+$color-primary:               #2980b9;
+$color-success:               #2ecc71;
+$color-info:                  #3498db;
+$color-warning:               #f39c12;
+$color-danger:                #e74c3c;
+
+
+$body-bg:                     $white;
+$body-color:                  $black;
+
+$link-color:                  $color-primary;
+$link-hover-color:            darken($link-color, 15%);
+
+
+
+
+// Typography
+
+$font-family-sans-serif:      sans-serif;
+$font-family-serif:           serif;
+$font-family-monospace:       monospace;
+$font-family-base:            $font-family-sans-serif;
+
+$font-size-root:              62.5%; // ~10px
+$font-size-base:              1.6rem;
+$font-size-xl:                2.4rem;
+$font-size-lg:                2.0rem;
+$font-size-sm:                1.4rem;
+$font-size-xs:                1.2rem;
+
+$font-size-h1:                4.0rem;
+$font-size-h2:                3.2rem;
+$font-size-h3:                2.8rem;
+$font-size-h4:                2.4rem;
+$font-size-h5:                2.0rem;
+$font-size-h6:                1.6rem;
+
+$line-height:                 1.5;
+
+$headings-margin-bottom:      0.5rem;
+$headings-font-weight:        700;
+$headings-line-height:        1.1;
+
+$text-muted:                  $gray-light;
