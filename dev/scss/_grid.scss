@@ -1,79 +1,24 @@
-.grid-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.grid {
+    display: flex;
+    flex-wrap: wrap;
 
-  &.grid-left {
-    justify-content: flex-start;
-  }
-  &.grid-center {
-    justify-content: center;
-  }
-  &.grid-right {
-    justify-content: flex-end;
-  }
-  &.grid-space-between {
-    justify-content: space-between;
-  }
-  &.grid-space-around {
-    justify-content: space-around;
-  }
-  &.grid-top {
-    align-items: flex-start;
-  }
-  &.grid-middle {
-    align-items: center;
-  }
-  &.grid-bottom {
-    align-items: flex-end;
-  }
-  &.grid-stretch {
-    align-items: stretch;
-  }
+    &.row {
+      flex-direction: row;
+    }
+    &.col {
+      flex-direction: column;
+    }
+
+    &.fluid {
+      width: 100%;
+    }
+    &.fixed {
+      width: $fixed-width;
+    }
 }
 
-
-
-
-.grid-col {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-
-  &.grid-top {
-    justify-content: flex-start;
-  }
-  &.grid-middle {
-    justify-content: center;
-  }
-  &.grid-bottom {
-    justify-content: flex-end;
-  }
-  &.grid-space-between {
-    justify-content: space-between;
-  }
-  &.grid-space-around {
-    justify-content: space-around;
-  }
-  &.grid-left {
-    align-items: flex-start;
-  }
-  &.grid-center {
-    align-items: center;
-  }
-  &.grid-right {
-    align-items: flex-end;
-  }
-  &.grid-stretch {
-    align-items: stretch;
-  }
-}
-
-
-
-.grid-row,
-.grid-col {
-  .cell {
-    flex: 1;
+@for $i from 1 through $columns {
+  .cell-#{$i} {
+    flex: ($i) 0 0;
   }
 }

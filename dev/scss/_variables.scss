@@ -1,23 +1,50 @@
+// Grid
+
+$columns:                     12;
+$fixed-width:                 960px;
+
+$breakpoints: (
+  xs:                         400px,
+  sm:                         600px,
+  md:                         720px,
+  lg:                         960px,
+  xl:                         1080px
+);
+
+@mixin breakpoint($breakpoint) {
+  @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+
+
+
+
 // Colors
 
-$black:                       #000000;
-$gray-dark:                   #7f8c8d;
-$gray:                        #95a5a6;
-$gray-light:                  #bdc3c7;
-$gray-lighter:                #ecf0f1;
-$white:                       #ffffff;
+$colors: (
+  black:                      #000000,
+  gray-dark:                  #7f8c8d,
+  gray:                       #95a5a6,
+  gray-light:                 #bdc3c7,
+  gray-lighter:               #ecf0f1,
+  white:                      #ffffff,
 
-$color-primary:               #2980b9;
-$color-success:               #2ecc71;
-$color-info:                  #3498db;
-$color-warning:               #f39c12;
-$color-danger:                #e74c3c;
+  primary:                    #2980b9,
+  success:                    #2ecc71,
+  info:                       #3498db,
+  warning:                    #f39c12,
+  danger:                     #e74c3c
+);
 
+@function color($color) {
+  @return map-get($colors, $color);
+}
 
-$body-bg:                     $white;
-$body-color:                  $black;
+$body-bg:                     color(white);
+$body-color:                  color(black);
 
-$link-color:                  $color-primary;
+$link-color:                  color(primary);
 $link-hover-color:            darken($link-color, 15%);
 
 
@@ -25,24 +52,41 @@ $link-hover-color:            darken($link-color, 15%);
 
 // Typography
 
-$font-family-sans-serif:      sans-serif;
-$font-family-serif:           serif;
-$font-family-monospace:       monospace;
-$font-family-base:            $font-family-sans-serif;
 
-$font-size-root:              62.5%; // ~10px
-$font-size-base:              1.6rem;
-$font-size-xl:                2.4rem;
-$font-size-lg:                2.0rem;
-$font-size-sm:                1.4rem;
-$font-size-xs:                1.2rem;
+$font-families: (
+  sans-serif:                 sans-serif,
+  serif:                      serif,
+  monospace:                  monospace
+);
 
-$font-size-h1:                4.0rem;
-$font-size-h2:                3.2rem;
-$font-size-h3:                2.8rem;
-$font-size-h4:                2.4rem;
-$font-size-h5:                2.0rem;
-$font-size-h6:                1.6rem;
+@function font-family($family) {
+  @return map-get($font-families, $family);
+}
+
+$font-family-base:            font-family(sans-serif);
+
+
+$font-size-root:              62.5%;
+
+$font-sizes: (
+  base:                       1.6rem,
+  xl:                         2.4rem,
+  lg:                         2.0rem,
+  sm:                         1.4rem,
+  xs:                         1.2rem,
+  
+  h1:                         4.0rem,
+  h2:                         3.2rem,
+  h3:                         2.8rem,
+  h4:                         2.4rem,
+  h5:                         2.0rem,
+  h6:                         1.6rem
+);
+
+@function font-size($size) {
+  @return map-get($font-sizes, $size);
+}
+
 
 $line-height:                 1.5;
 
@@ -50,4 +94,4 @@ $headings-margin-bottom:      0.5rem;
 $headings-font-weight:        700;
 $headings-line-height:        1.1;
 
-$text-muted:                  $gray-light;
+$text-muted:                  color(gray-light);
