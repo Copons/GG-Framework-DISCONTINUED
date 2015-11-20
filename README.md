@@ -18,7 +18,7 @@ Clone the project and run `npm i`.
 
 Then, just run `grunt serve` to automatically do compile the .scss files.<br>
 It will also open a livereload-enabled server at `http://localhost:3000`.<br>
-My suggestion is to create a `test/index.html` file to fiddle around. Also because Grunt comes already configured to livereload any .html files in the `test` folder, so, you know...
+My suggestion is to create a `dev/test/index.html` file to fiddle around. Also because Grunt comes already configured to livereload any .html files in the `test` folder, so, you know...
 
 Should you need to build the project for production use: `grunt build`.<br>
 Currently, it just creates the exact same `dev/css/gg-framework.min.css`, but in `dist/` instead.
