@@ -1,6 +1,7 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 
     &.row {
       flex-direction: row;
@@ -9,16 +10,30 @@
       flex-direction: column;
     }
 
-    &.fluid {
-      width: 100%;
-    }
-    &.fixed {
-      width: $fixed-width;
+    &.responsive {
+      margin: 0 auto;
+      @each $size, $breakpoint in $breakpoints {
+        @include breakpoint($size) {
+          width: $breakpoint;
+        }
+      }
     }
 }
 
+
+
+
 @for $i from 1 through $columns {
   .cell-#{$i} {
-    flex: ($i) 0 0;
+    flex: 0 0 (($i / $columns) * 100%);
+  }
+  @each $size, $breakpoint in $breakpoints {
+    @include breakpoint($size) {
+      @for $i from 1 through $columns {
+        .cell-#{$size}-#{$i} {
+          flex: 0 0 (($i / $columns) * 100%);
+        }
+      }
+    }
   }
 }

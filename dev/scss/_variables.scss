@@ -1,7 +1,7 @@
 // Grid
 
 $columns:                     12;
-$fixed-width:                 960px;
+$gutter:                      10px;
 
 $breakpoints: (
   xs:                         400px,
@@ -74,7 +74,7 @@ $font-sizes: (
   lg:                         2.0rem,
   sm:                         1.4rem,
   xs:                         1.2rem,
-  
+
   h1:                         4.0rem,
   h2:                         3.2rem,
   h3:                         2.8rem,
