@@ -3467,3 +3467,73 @@ body {
     -webkit-flex: 0 0 100%;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%; } }
+
+.btn {
+  display: inline-block;
+  padding: 0.4em 1.2em;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  vertical-align: middle; }
+
+.btn-raised {
+  box-shadow: 0 0.15em 0.3em 0 rgba(0, 0, 0, 0.16), 0 0.15em 0.6em 0 rgba(0, 0, 0, 0.12);
+  transition: all .3s ease-out; }
+  .btn-raised:hover, .btn-raised:focus {
+    box-shadow: 0 0.3em 0.8em 0 rgba(0, 0, 0, 0.18), 0 0.25em 1em 0 rgba(0, 0, 0, 0.15);
+    transition: all .3s ease-out; }
+
+.btn-block {
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+.btn-xs {
+  font-size: 1.2rem; }
+
+.btn-sm {
+  font-size: 1.4rem; }
+
+.btn-lg {
+  font-size: 2rem; }
+
+.btn-xl {
+  font-size: 2.4rem; }
+
+.btn-primary {
+  background-color: #2980b9; }
+  .btn-primary:hover, .btn-primary:focus {
+    background-color: #3493d2; }
+  .btn-primary:active {
+    background-color: #236c9c; }
+
+.btn-success {
+  background-color: #2ecc71; }
+  .btn-success:hover, .btn-success:focus {
+    background-color: #48d684; }
+  .btn-success:active {
+    background-color: #27af61; }
+
+.btn-info {
+  background-color: #3498db; }
+  .btn-info:hover, .btn-info:focus {
+    background-color: #52a7e0; }
+  .btn-info:active {
+    background-color: #2386c8; }
+
+.btn-warning {
+  background-color: #f39c12; }
+  .btn-warning:hover, .btn-warning:focus {
+    background-color: #f5aa34; }
+  .btn-warning:active {
+    background-color: #d6880b; }
+
+.btn-danger {
+  background-color: #e74c3c; }
+  .btn-danger:hover, .btn-danger:focus {
+    background-color: #eb695c; }
+  .btn-danger:active {
+    background-color: #e32f1c; }

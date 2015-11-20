@@ -1,0 +1,90 @@
+.btn {
+  display: inline-block;
+  padding: 0.4em 1.2em;
+
+  background-color: transparent;
+  border: none;
+  color: color(white);
+  font-weight: 700;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.btn-raised {
+  box-shadow: 0 0.15em 0.3em 0 rgba(color(black), 0.16),
+              0 0.15em 0.6em 0 rgba(color(black), 0.12);
+  transition: all .3s ease-out;
+  &:hover, &:focus {
+    box-shadow: 0 0.3em 0.8em 0 rgba(color(black), 0.18),
+                0 0.25em 1em 0 rgba(color(black), 0.15);
+    transition: all .3s ease-out;
+  }
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+.btn-xs {
+  font-size: font-size(xs);
+}
+.btn-sm {
+  font-size: font-size(sm);
+}
+.btn-lg {
+  font-size: font-size(lg);
+}
+.btn-xl {
+  font-size: font-size(xl);
+}
+
+
+.btn-primary {
+  background-color: color(primary);
+  &:hover, &:focus {
+    background-color: lighten(color(primary), 7%);
+  }
+  &:active {
+    background-color: darken(color(primary), 7%);
+  }
+}
+.btn-success {
+  background-color: color(success);
+  &:hover, &:focus {
+    background-color: lighten(color(success), 7%);
+  }
+  &:active {
+    background-color: darken(color(success), 7%);
+  }
+}
+.btn-info {
+  background-color: color(info);
+  &:hover, &:focus {
+    background-color: lighten(color(info), 7%);
+  }
+  &:active {
+    background-color: darken(color(info), 7%);
+  }
+}
+.btn-warning {
+  background-color: color(warning);
+  &:hover, &:focus {
+    background-color: lighten(color(warning), 7%);
+  }
+  &:active {
+    background-color: darken(color(warning), 7%);
+  }
+}
+.btn-danger {
+  background-color: color(danger);
+  &:hover, &:focus {
+    background-color: lighten(color(danger), 7%);
+  }
+  &:active {
+    background-color: darken(color(danger), 7%);
+  }
+}
