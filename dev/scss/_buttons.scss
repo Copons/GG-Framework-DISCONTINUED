@@ -1,6 +1,8 @@
 .btn {
   display: inline-block;
-  padding: 0.4em 1.2em;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+  padding: 0.3em 1em;
 
   background-color: transparent;
   border: none;
@@ -29,62 +31,25 @@
 }
 
 
-.btn-xs {
-  font-size: font-size(xs);
-}
-.btn-sm {
-  font-size: font-size(sm);
-}
-.btn-lg {
-  font-size: font-size(lg);
-}
-.btn-xl {
-  font-size: font-size(xl);
+
+
+@each $size, $breakpoint in $sizes {
+  .btn-#{$size} {
+    font-size: font-size($size);
+  }
 }
 
 
-.btn-primary {
-  background-color: color(primary);
-  &:hover, &:focus {
-    background-color: lighten(color(primary), 7%);
-  }
-  &:active {
-    background-color: darken(color(primary), 7%);
-  }
-}
-.btn-success {
-  background-color: color(success);
-  &:hover, &:focus {
-    background-color: lighten(color(success), 7%);
-  }
-  &:active {
-    background-color: darken(color(success), 7%);
-  }
-}
-.btn-info {
-  background-color: color(info);
-  &:hover, &:focus {
-    background-color: lighten(color(info), 7%);
-  }
-  &:active {
-    background-color: darken(color(info), 7%);
-  }
-}
-.btn-warning {
-  background-color: color(warning);
-  &:hover, &:focus {
-    background-color: lighten(color(warning), 7%);
-  }
-  &:active {
-    background-color: darken(color(warning), 7%);
-  }
-}
-.btn-danger {
-  background-color: color(danger);
-  &:hover, &:focus {
-    background-color: lighten(color(danger), 7%);
-  }
-  &:active {
-    background-color: darken(color(danger), 7%);
+
+
+@each $color, $hex in $colors {
+  .btn-#{$color} {
+    background-color: color($color);
+    &:hover, &:focus {
+      background-color: lighten(color($color), 7%);
+    }
+    &:active {
+      background-color: darken(color($color), 7%);
+    }
   }
 }

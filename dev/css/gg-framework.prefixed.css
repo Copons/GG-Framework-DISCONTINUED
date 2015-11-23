@@ -391,7 +391,8 @@ body {
         -ms-flex-direction: column;
             flex-direction: column; }
   .grid.responsive {
-    margin: 0 auto; }
+    margin-left: auto;
+    margin-right: auto; }
     @media (min-width: 400px) {
       .grid.responsive {
         width: 400px; } }
@@ -3470,7 +3471,9 @@ body {
 
 .btn {
   display: inline-block;
-  padding: 0.4em 1.2em;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+  padding: 0.3em 1em;
   background-color: transparent;
   border: none;
   color: #ffffff;
