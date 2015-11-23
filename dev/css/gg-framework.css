@@ -2065,6 +2065,42 @@ body {
   .btn-danger:active {
     background-color: #e32f1c; }
 
+.label,
+.pill {
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  background: #95a5a6;
+  color: #ffffff;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  vertical-align: text-bottom; }
+  .label.label-pill,
+  .pill.label-pill {
+    border-radius: 1em;
+    padding: 0.2em 0.6em; }
+
+.label-primary,
+.pill-primary {
+  background-color: #2980b9; }
+
+.label-success,
+.pill-success {
+  background-color: #2ecc71; }
+
+.label-info,
+.pill-info {
+  background-color: #3498db; }
+
+.label-warning,
+.pill-warning {
+  background-color: #f39c12; }
+
+.label-danger,
+.pill-danger {
+  background-color: #e74c3c; }
+
 /*!
  *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

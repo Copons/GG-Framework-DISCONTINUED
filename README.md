@@ -100,6 +100,23 @@ In the following example, you can see a bunch of available modifiers:
 ```
 
 
+### Labels
+
+`.label` will do the work.<br>
+Modify it with a `.label-pill` to round its border, and with the usual colors to change its background.
+
+Example:
+
+```html
+<span class="label">
+  Default gray label.
+</span>
+<span class="label label-pill label-warning">
+  Rounded orange label.
+</span>
+```
+
+
 ### Icons
 
 **GG Framework** uses **Font Awesome 4.4.0** icons, with their default settings.

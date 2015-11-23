@@ -1,0 +1,23 @@
+.label,
+.pill {
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  background: color(gray);
+  color: color(white);
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  vertical-align: text-bottom;
+  &.label-pill {
+    border-radius: 1em;
+    padding: 0.2em 0.6em;
+  }
+}
+
+@each $color, $hex in $colors {
+  .label-#{$color},
+  .pill-#{$color} {
+    background-color: color($color);
+  }
+}
