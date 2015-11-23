@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-          'dist/gg-framework.min.css': 'dev/css/gg-framework.prefixed.css'
+          'dist/css/gg-framework.min.css': 'dev/css/gg-framework.prefixed.css'
         }
       }
     },
