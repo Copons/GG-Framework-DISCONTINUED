@@ -1,23 +1,24 @@
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 
-    &.row {
-      flex-direction: row;
-    }
-    &.col {
-      flex-direction: column;
-    }
+  &.row {
+    flex-direction: row;
+  }
+  &.col {
+    flex-direction: column;
+  }
 
-    &.responsive {
-      margin: 0 auto;
-      @each $size, $breakpoint in $breakpoints {
-        @include breakpoint($size) {
-          width: $breakpoint;
-        }
+  &.responsive {
+    margin-left: auto;
+    margin-right: auto;
+    @each $size, $breakpoint in $sizes {
+      @include breakpoint($size) {
+        width: $breakpoint;
       }
     }
+  }
 }
 
 
@@ -27,7 +28,7 @@
   .cell-#{$i} {
     flex: 0 0 (($i / $columns) * 100%);
   }
-  @each $size, $breakpoint in $breakpoints {
+  @each $size, $breakpoint in $sizes {
     @include breakpoint($size) {
       @for $i from 1 through $columns {
         .cell-#{$size}-#{$i} {
