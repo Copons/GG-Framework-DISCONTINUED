@@ -5524,7 +5524,7 @@ a {
         -webkit-justify-content: space-between;
             -ms-flex-pack: justify;
                 justify-content: space-between; }
-        .navbar ul li a.navbar-dropdown span {
+        .navbar ul li a span {
           padding-left: 0.5em; }
   .navbar > ul {
     display: -webkit-flex;

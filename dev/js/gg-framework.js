@@ -3,9 +3,9 @@
 // CLOSE EVERYTHING ON CLICK OUTSIDE
 
 $(document).on('click', function (e) {
-  if (!$(e.target).closest('.navbar-dropdown').length) {
+  /*if (!$(e.target).closest('.navbar-dropdown').length) {
     closeNavbarDropdown($('.navbar-dropdown').next());
-  }
+  }*/
 });
 
 
@@ -14,7 +14,7 @@ $(document).on('click', function (e) {
 
 $('.navbar-dropdown').on('click', function (e) {
   e.preventDefault();
-  closeNavbarDropdown($('.navbar-dropdown').not($(this)).next());
+  //closeNavbarDropdown($('.navbar-dropdown').not($(this)).next());
 
   var navbarItem = $(this).next();
 
@@ -22,6 +22,7 @@ $('.navbar-dropdown').on('click', function (e) {
     openNavbarDropdown(navbarItem);
   }
   else if (navbarItem.css('display') === 'block') {
+    closeNavbarDropdown(navbarItem.find('ul'));
     closeNavbarDropdown(navbarItem);
   }
 });
