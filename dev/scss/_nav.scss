@@ -32,6 +32,7 @@
 
         + ul {
           display: none;
+          opacity: 0;
           background-color: color(white);
           color: color(black);
           li > a {
@@ -47,11 +48,11 @@
           background-color: lighten(color(black), 15%);
         }
       }
-      &:hover, &:focus {
+      /*&:hover, &:focus {
         > a + ul {
           display: block;
         }
-      }
+      }*/
     }
   }
 

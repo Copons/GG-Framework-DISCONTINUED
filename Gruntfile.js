@@ -42,7 +42,8 @@ module.exports = function(grunt) {
         },
         files: {
           'dev/js/gg-framework.min.js': [
-            'dev/js/libs/**/*.js',
+            'dev/js/libs/zepto.js',
+            'dev/js/libs/velocity.js',
             'dev/js/gg-framework.js'
           ]
         }
