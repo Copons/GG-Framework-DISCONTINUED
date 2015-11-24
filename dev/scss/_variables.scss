@@ -12,11 +12,32 @@ $sizes: (
 );
 
 @mixin breakpoint($breakpoint) {
-  @media (min-width: #{map-get($sizes, $breakpoint)}) {
-    @content;
+  @if $breakpoint == base {
+    @media (max-width: #{map-get($sizes, xs)}) {
+      @content;
+    }
+  }
+  @else {
+    @media (min-width: #{map-get($sizes, $breakpoint)}) {
+      @content;
+    }
   }
 }
 
+
+
+
+// Z Index
+
+$z-indexes: (
+  raised:                     5,
+  popup:                      100,
+  modal:                      500
+);
+
+@function z($index) {
+  @return map-get($z-indexes, $index);
+}
 
 
 

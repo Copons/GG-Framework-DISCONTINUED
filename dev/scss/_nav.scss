@@ -1,0 +1,91 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: color(black);
+  color: color(white);
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      display: block;
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  > ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    > li {
+      > a {
+        padding: 0.6em 1em;
+        color: color(white);
+
+        + ul {
+          display: none;
+          background-color: color(white);
+          color: color(black);
+          li > a {
+            padding: 0.4em 1em;
+            color: color(gray-dark);
+            &:hover, &:focus {
+              background-color: color(gray-lighter);
+            }
+          }
+        }
+
+        &:hover {
+          background-color: lighten(color(black), 15%);
+        }
+      }
+      &:hover, &:focus {
+        > a + ul {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &.navbar-fixed {
+    position: fixed;
+    top: 0;
+  }
+}
+
+
+@include breakpoint(base) {
+
+  .navbar {
+    flex-direction: column;
+    > ul {
+      flex-direction: column;
+    }
+  }
+
+}
+
+@include breakpoint(sm) {
+
+  .navbar {
+    flex-direction: row;
+    > ul {
+      flex-direction: row;
+      > li > a + ul {
+        position: absolute;
+        z-index: z(raised);
+        width: 20rem;
+        @extend .shadow-low;
+      }
+    }
+  }
+
+}
