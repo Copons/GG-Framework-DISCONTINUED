@@ -15,7 +15,12 @@
       display: block;
 
       a {
-        display: block;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        &.navbar-dropdown span {
+          padding-left: 0.5em;
+        }
       }
     }
   }
@@ -32,12 +37,20 @@
 
         + ul {
           display: none;
-          opacity: 0;
           background-color: color(white);
           color: color(black);
           li > a {
             padding: 0.4em 1em;
             color: color(gray-dark);
+
+            + ul {
+              display: none;
+              top: 0;
+              right: -200px;
+              background-color: color(white);
+              color: color(black);
+            }
+
             &:hover, &:focus {
               background-color: color(gray-lighter);
             }
@@ -48,11 +61,6 @@
           background-color: lighten(color(black), 15%);
         }
       }
-      /*&:hover, &:focus {
-        > a + ul {
-          display: block;
-        }
-      }*/
     }
   }
 
@@ -80,11 +88,14 @@
     flex-direction: row;
     > ul {
       flex-direction: row;
-      > li > a + ul {
+      > li a + ul {
         position: absolute;
         z-index: z(raised);
-        width: 20rem;
+        min-width: 20rem;
         @extend .shadow-low;
+        ul {
+          right: 0;
+        }
       }
     }
   }
