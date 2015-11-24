@@ -3,8 +3,8 @@
   "version": "0.1.6",
   "description": "A work in progress CSS3 framework.",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Copons/gg-framework.git"
+    "type": "git",
+    "url": "https://github.com/Copons/gg-framework.git"
   },
   "keywords": [
     "css",
@@ -18,6 +18,7 @@
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^3.0.3",
     "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-uglify": "^0.11.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-express": "^1.4.1",
     "grunt-sass": "^1.1.0",

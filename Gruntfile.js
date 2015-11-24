@@ -5,6 +5,9 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     sass: {
+      options: {
+        sourceMap: true
+      },
       dev: {
         files: {
           'dev/css/gg-framework.css': 'dev/scss/gg-framework.scss'
@@ -15,7 +18,8 @@ module.exports = function(grunt) {
     autoprefixer: {
       dev: {
         options: {
-          browsers: ['last 2 versions']
+          browsers: ['last 2 versions'],
+          map: true
         },
         files: {
           'dev/css/gg-framework.prefixed.css': 'dev/css/gg-framework.css'
@@ -24,14 +28,28 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
-      dev: {
+      build: {
         files: {
-          'dev/css/gg-framework.min.css': 'dev/css/gg-framework.prefixed.css'
+          'dist/css/gg-framework.min.css': 'dev/css/gg-framework.prefixed.css'
+        }
+      }
+    },
+
+    uglify: {
+      dev: {
+        options: {
+          sourceMap: true
+        },
+        files: {
+          'dev/js/gg-framework.min.js': [
+            'dev/js/libs/**/*.js',
+            'dev/js/gg-framework.js'
+          ]
         }
       },
       build: {
         files: {
-          'dist/css/gg-framework.min.css': 'dev/css/gg-framework.prefixed.css'
+          'dist/js/gg-framework.min.js': 'dev/js/gg-framework.js'
         }
       }
     },
@@ -52,18 +70,25 @@ module.exports = function(grunt) {
         livereload: true
       },
       styles: {
+        files: ['dev/scss/**/*.scss'],
+        tasks: ['sass:dev', 'autoprefixer:dev']
+      },
+      scripts: {
         files: [
-          'dev/scss/**/*.scss',
-          'dev/test/**/*'
+          'dev/js/libs/**/*.js',
+          'dev/js/gg-framework.js'
         ],
-        tasks: ['sass:dev', 'autoprefixer:dev', 'cssmin:dev']
+        tasks: ['uglify:dev']
+      },
+      test: {
+        files: ['dev/test/**/*']
       }
     }
 
   });
 
-  grunt.registerTask('serve', ['express', 'watch:styles']);
+  grunt.registerTask('serve', ['express', 'watch']);
 
-  grunt.registerTask('build', ['sass:dev', 'autoprefixer:dev', 'cssmin:build']);
+  grunt.registerTask('build', ['sass:dev', 'autoprefixer:dev', 'cssmin:build', 'uglify:build']);
 
 };
