@@ -5547,7 +5547,7 @@ a {
           .navbar > ul > li > a + ul li > a + ul {
             display: none;
             top: 0;
-            right: -200px;
+            right: -20rem;
             background-color: #ffffff;
             color: #000000; }
           .navbar > ul > li > a + ul li > a:hover, .navbar > ul > li > a + ul li > a:focus {
@@ -5568,7 +5568,7 @@ a {
           -ms-flex-direction: column;
               flex-direction: column; } }
 
-@media (min-width: 600px) {
+@media (min-width: 400px) {
   .navbar {
     -webkit-flex-direction: row;
         -ms-flex-direction: row;

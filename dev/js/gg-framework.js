@@ -3,9 +3,9 @@
 // CLOSE EVERYTHING ON CLICK OUTSIDE
 
 $(document).on('click', function (e) {
-  /*if (!$(e.target).closest('.navbar-dropdown').length) {
-    closeNavbarDropdown($('.navbar-dropdown').next());
-  }*/
+  if (!$(e.target).closest('.navbar-dropdown').length) {
+    closeNavbarDropdown($('.navbar-dropdown + .open'));
+  }
 });
 
 
@@ -14,7 +14,11 @@ $(document).on('click', function (e) {
 
 $('.navbar-dropdown').on('click', function (e) {
   e.preventDefault();
-  //closeNavbarDropdown($('.navbar-dropdown').not($(this)).next());
+  closeNavbarDropdown(
+    $('.navbar-dropdown + .open')
+      .not($(this))
+      .not($(this).parents())
+  );
 
   var navbarItem = $(this).next();
 
@@ -22,7 +26,7 @@ $('.navbar-dropdown').on('click', function (e) {
     openNavbarDropdown(navbarItem);
   }
   else if (navbarItem.css('display') === 'block') {
-    closeNavbarDropdown(navbarItem.find('ul'));
+    closeNavbarDropdown(navbarItem.find('ul.open'));
     closeNavbarDropdown(navbarItem);
   }
 });
@@ -40,7 +44,8 @@ function openNavbarDropdown (navbarItem) {
   };
   navbarItem
     .velocity('fadeIn', options)
-    .velocity('slideDown', options);
+    .velocity('slideDown', options)
+    .addClass('open');
 }
 function closeNavbarDropdown (navbarItem) {
   var options = {
@@ -50,7 +55,8 @@ function closeNavbarDropdown (navbarItem) {
   };
   navbarItem
     .velocity('fadeOut', options)
-    .velocity('slideUp', options);
+    //.velocity('slideUp', options)
+    .removeClass('open');
 }
 
 })(Zepto);
