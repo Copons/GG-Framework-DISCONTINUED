@@ -1,0 +1,17 @@
+table {
+  border: 1px solid color(gray-light);
+
+  &.fluid {
+    width: 100%;
+  }
+}
+
+th,
+td {
+  padding: 0.3em 1em;
+  border: 1px solid color(gray-light);
+}
+
+th {
+  background-color: color(gray-lighter);
+}

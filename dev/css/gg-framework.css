@@ -4195,4 +4195,17 @@ a {
 .pill-danger {
   background-color: #e74c3c; }
 
+table {
+  border: 1px solid #bdc3c7; }
+  table.fluid {
+    width: 100%; }
+
+th,
+td {
+  padding: 0.3em 1em;
+  border: 1px solid #bdc3c7; }
+
+th {
+  background-color: #ecf0f1; }
+
 /*# sourceMappingURL=gg-framework.css.map */
