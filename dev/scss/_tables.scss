@@ -1,17 +1,81 @@
 table {
-  border: 1px solid color(gray-light);
+  th,
+  td {
+    padding: 0.3em 1em;
+    border-bottom: 1px solid color(gray-light);
+  }
+  tbody tr:hover {
+    background-color: darken(color(white), 5%);
+  }
+  tfoot {
+    border-top: 2px solid color(gray-light);
+  }
 
-  &.fluid {
+  &.table-fluid {
     width: 100%;
   }
-}
 
-th,
-td {
-  padding: 0.3em 1em;
-  border: 1px solid color(gray-light);
-}
+  &.table-bordered {
+    border: 1px solid color(gray-light);
+    th,
+    td {
+      border: 1px solid color(gray-light);
+    }
+  }
 
-th {
-  background-color: color(gray-lighter);
+  &.table-condensed {
+    th,
+    td {
+      padding: 0.1em 0.5em;
+    }
+  }
+
+  &.table-striped {
+    th {
+      background-color: color(gray-lighter);
+    }
+
+    tr:nth-child(even) {
+      background-color: lighten(color(gray-lighter), 4%);
+      &:hover {
+        background-color: darken(lighten(color(gray-lighter), 4%), 5%);
+
+      }
+    }
+  }
+
+  tr,
+  &.table-striped tr:nth-child(even) {
+    &.primary {
+      background-color: lighten(color(primary), 15%);
+      &:hover {
+        background-color: color(primary);
+      }
+    }
+    &.success {
+      background-color: lighten(color(success), 15%);
+      &:hover {
+        background-color: color(success);
+      }
+    }
+    &.info {
+      background-color: lighten(color(info), 15%);
+      &:hover {
+        background-color: color(info);
+      }
+    }
+    &.warning {
+      background-color: lighten(color(warning), 15%);
+      &:hover {
+        background-color: color(warning);
+      }
+    }
+    &.danger {
+      background-color: lighten(color(danger), 15%);
+      &:hover {
+        background-color: color(danger);
+      }
+    }
+  }
+
 }

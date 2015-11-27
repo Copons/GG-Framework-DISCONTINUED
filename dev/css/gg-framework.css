@@ -4195,17 +4195,71 @@ a {
 .pill-danger {
   background-color: #e74c3c; }
 
-table {
-  border: 1px solid #bdc3c7; }
-  table.fluid {
-    width: 100%; }
-
-th,
-td {
+table th,
+table td {
   padding: 0.3em 1em;
-  border: 1px solid #bdc3c7; }
+  border-bottom: 1px solid #bdc3c7; }
 
-th {
+table tbody tr:hover {
+  background-color: #f2f2f2; }
+
+table tfoot {
+  border-top: 2px solid #bdc3c7; }
+
+table.table-fluid {
+  width: 100%; }
+
+table.table-bordered {
+  border: 1px solid #bdc3c7; }
+  table.table-bordered th,
+  table.table-bordered td {
+    border: 1px solid #bdc3c7; }
+
+table.table-condensed th,
+table.table-condensed td {
+  padding: 0.1em 0.5em; }
+
+table.table-striped th {
   background-color: #ecf0f1; }
+
+table.table-striped tr:nth-child(even) {
+  background-color: #f8f9fa; }
+  table.table-striped tr:nth-child(even):hover {
+    background-color: #e9eeef; }
+
+table tr.primary,
+table.table-striped tr:nth-child(even).primary {
+  background-color: #55a5d9; }
+  table tr.primary:hover,
+  table.table-striped tr:nth-child(even).primary:hover {
+    background-color: #2980b9; }
+
+table tr.success,
+table.table-striped tr:nth-child(even).success {
+  background-color: #69dd9a; }
+  table tr.success:hover,
+  table.table-striped tr:nth-child(even).success:hover {
+    background-color: #2ecc71; }
+
+table tr.info,
+table.table-striped tr:nth-child(even).info {
+  background-color: #75b9e7; }
+  table tr.info:hover,
+  table.table-striped tr:nth-child(even).info:hover {
+    background-color: #3498db; }
+
+table tr.warning,
+table.table-striped tr:nth-child(even).warning {
+  background-color: #f7ba5b; }
+  table tr.warning:hover,
+  table.table-striped tr:nth-child(even).warning:hover {
+    background-color: #f39c12; }
+
+table tr.danger,
+table.table-striped tr:nth-child(even).danger {
+  background-color: #ef8b80; }
+  table tr.danger:hover,
+  table.table-striped tr:nth-child(even).danger:hover {
+    background-color: #e74c3c; }
 
 /*# sourceMappingURL=gg-framework.css.map */
