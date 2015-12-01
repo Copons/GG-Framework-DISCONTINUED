@@ -6,33 +6,125 @@
     <link rel="stylesheet" href="dist/css/gg-framework.min.css">
     <style>
 
-section.grid {
-  padding: 1rem;
+body {
+  padding-top: 43px;
+}
+
+.hero {
+  height: auto;
   text-align: center;
+}
+.hero h1 {
+  margin: 0;
+  padding: 0 1rem;
+}
+.hero h2 {
+  margin: 0;
+  padding: 0 1rem;
+}
+.hero p {
+  padding: 0 1rem;
+}
+
+#kitchen-sink {
+  padding: 1rem;
+}
+
+.example {
+  padding: 1rem;
+  border: 1px solid #ccc;
 }
 
     </style>
   </head>
   <body>
 
-    <header class="hero hero-half">
+    <nav class="navbar navbar-fixed">
+      <ul>
+        <li>
+          <a href="#kitchen-sink" class="navbar-dropdown">
+            Kitchen Sink
+            <span class="fa fa-caret-down"></span>
+          </a>
+          <ul>
+            <li>
+              <a href="#sink-buttons">Buttons</a>
+            </li>
+            <li>
+              <a href="#sink-labels">Labels</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <header class="hero">
 
       <h1>GG Framework</h1>
+      <h2>A CSS3 flex framework in a REALLY rough development state.</h2>
+      <p>
+        Check it out on <a href="https://github.com/Copons/GG-Framework">GitHub</a>, though!
+      </p>
 
     </header>
 
-    <section class="grid">
+    <div id="kitchen-sink" class="grid">
 
-      <div class="cell-12">
-        <p>
-          Documentation coming soon-ish!
-        </p>
-        <p>
-          Meanwhile do whatever you please with the <a href="https://github.com/Copons/GG-Framework">source</a>!
-        </p>
-      </div>
+      <section class="cell-12" id="sink-buttons">
 
-    </section>
+        <h1>Buttons</h1>
+
+        <h2>Colors</h2>
+        <div class="example">
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-success">Success</button>
+          <button class="btn btn-info">Info</button>
+          <button class="btn btn-warning">Warning</button>
+          <button class="btn btn-danger">Danger</button>
+        </div>
+
+        <h2>Sizes</h2>
+        <div class="example">
+          <button class="btn btn-primary btn-xs">XS</button>
+          <button class="btn btn-primary btn-sm">SM</button>
+          <button class="btn btn-primary">MD</button>
+          <button class="btn btn-primary btn-lg">LG</button>
+          <button class="btn btn-primary btn-xl">XL</button>
+        </div>
+
+        <h2>Other Modifiers</h2>
+        <div class="example">
+          <button class="btn btn-primary btn-raised">Raised</button>
+          <button class="btn btn-primary btn-block">Block</button>
+        </div>
+
+      </section>
+
+      <section class="cell-12" id="sink-labels">
+
+        <h1>Labels</h1>
+
+        <h2>Colors</h2>
+        <div class="example">
+          <span class="label">Default</span>
+          <span class="label label-primary">Primary</span>
+          <span class="label label-success">Success</span>
+          <span class="label label-info">Info</span>
+          <span class="label label-warning">Warning</span>
+          <span class="label label-danger">Danger</span>
+        </div>
+
+        <h2>Pill</h2>
+        <div class="example">
+          <span class="label label-pill">Pill</span>
+        </div>
+
+
+      </section>
+
+
+
+    </div>
 
 
 
@@ -40,5 +132,10 @@ section.grid {
     <script src="dist/js/zepto.min.js" charset="utf-8"></script>
     <script src="dist/js/velocity.min.js" charset="utf-8"></script>
     <script src="dist/js/gg-framework.min.js" charset="utf-8"></script>
+    <script charset="utf-8">
+;(function($){
+
+})(Zepto);
+    </script>
   </body>
 </html>
