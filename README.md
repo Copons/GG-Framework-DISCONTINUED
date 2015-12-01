@@ -79,6 +79,11 @@ Example:
 Also, the grid comes already `wrap` enabled, so just stuff it with how many cells you please.
 
 
+### Navbar
+
+TODO
+
+
 ### Buttons
 
 Just add `.btn` to `<a>` or `<button>` (or any other element, but I can't guarantee it'll work) and you're good to go.
@@ -115,6 +120,64 @@ Example:
   Rounded orange label.
 </span>
 ```
+
+
+### Tables
+
+Default table are auto-wide, their rows darken on mouse over and only the cells' bottom border is visible.
+
+But they also come in plenty of flavors:
+
+- `.table-fluid` goes all the way to `width: 100%`;
+- `.table-bordered` fully borders every cell;
+- `.table-striped` darkens even rows;
+- `.table-condensed` reduces the cells' padding.
+
+Rows can be modified with the usual colors to change their background.
+
+Example:
+```html
+<table class="table-fluid table-bordered table-striped table-condensed">
+  <caption>Table caption.</caption>
+  <thead>
+    <tr>
+      <th>Head</th>
+      <th>Head</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Body</td>
+      <td>Body</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr class="warning">
+      <td>Body</td>
+      <td>Body</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+
+### Heroes
+
+Heroes are fullscreen flex thingamabobs, flowing column wrap, already enabled with a full-size cover background.
+Just put whatever inside and that's it.
+
+Should you need the hero to only be half the window height, just add `.hero-half`.
+
+Should you like your hero's background image to stay fixed in place, just add `.hero-fixed-bg`.
+
+Example:
+```html
+<div class="hero hero-fixed-bg">
+  <h1>Hero Title</h1>
+</div>
+```
+
+If you're using a hero with a fixed navbar, don't use the `padding-top` on the body, as it would move down the hero, together with its `100vh`.
 
 
 ### Icons
