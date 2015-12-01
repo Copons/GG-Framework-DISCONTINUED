@@ -98,6 +98,7 @@ node_modules
 
 
 ### Custom ###
+gh-pages
 test
 tmp
 dev/css
