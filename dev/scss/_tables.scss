@@ -39,7 +39,6 @@ table {
       background-color: lighten(color(gray-lighter), 4%);
       &:hover {
         background-color: darken(lighten(color(gray-lighter), 4%), 5%);
-
       }
     }
   }
