@@ -1,0 +1,57 @@
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form-group {
+  margin-bottom: 1em;
+
+  &.required label:after {
+    @extend .fa;
+    content: $fa-var-asterisk;
+    padding-left: 0.3em;
+    color: color(danger);
+  }
+
+  input.field,
+  select.field,
+  textarea.field {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid color(gray-light);
+  }
+
+  input.field,
+  select,
+  textarea {
+    &:focus {
+      border: 1px solid color(info);
+      outline: 0;
+    }
+
+    &.error {
+      border-color: color(danger);
+    }
+    &.warning {
+      border-color: color(warning);
+    }
+    &.success {
+      border-color: color(success);
+    }
+  }
+  input[type="submit"]:focus {
+    border: none;
+    outline: 0;
+  }
+
+  .field-file {
+    display: block;
+  }
+
+  .field-checkbox,
+  .field-radio {
+
+  }
+
+}
